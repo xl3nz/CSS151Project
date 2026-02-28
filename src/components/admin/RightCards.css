@@ -1,0 +1,90 @@
+.admin-right-cards {
+  align-items: flex-start;
+  display: flex;
+  min-width: 587px;
+  position: relative;
+}
+
+.admin-right-cards .admin-right-cards-layout {
+  height: 769px;
+  position: absolute;
+  width: 587px;
+  z-index: 1;
+}
+
+.admin-right-cards .admin-right-blood-card,
+.admin-right-cards .admin-right-money-card,
+.admin-right-cards .admin-right-clothes-card,
+.admin-right-cards .admin-right-food-card,
+.admin-right-cards .admin-right-items-card,
+.admin-right-cards .admin-right-mixed-card {
+  position: absolute;
+}
+
+.admin-right-cards .admin-right-mixed-card { left: 0; top: 0; width: 285px; height: 242px; }
+.admin-right-cards .admin-right-blood-card { left: 302px; top: 0; width: 287px; height: 242px; }
+.admin-right-cards .admin-right-money-card { left: 0; top: 264px; width: 285px; height: 240px; }
+.admin-right-cards .admin-right-clothes-card { left: 302px; top: 264px; width: 287px; height: 240px; }
+.admin-right-cards .admin-right-food-card { left: 0; top: 527px; width: 285px; height: 242px; }
+.admin-right-cards .admin-right-items-card { left: 302px; top: 527px; width: 287px; height: 242px; }
+
+.admin-right-cards .admin-right-card-bg,
+.admin-right-cards .admin-right-card-bg-money,
+.admin-right-cards .admin-right-card-bg-clothes,
+.admin-right-cards .admin-right-card-bg-short {
+  -webkit-backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 51%, rgba(255, 255, 255, 0.1) 100%);
+  border-radius: 30px;
+  box-shadow:
+    0px 0px 42px #00000094,
+    inset 0px 50px 32px -35px #ffffff52,
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 1px 0 0 rgba(255, 255, 255, 0.32),
+    inset 0 -1px 33px rgba(0, 0, 0, 0.2),
+    inset -1px 0 33px rgba(0, 0, 0, 0.16);
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.admin-right-cards .admin-right-card-bg,
+.admin-right-cards .admin-right-card-bg-clothes { width: 285px; height: 240px; }
+.admin-right-cards .admin-right-card-bg-money,
+.admin-right-cards .admin-right-card-bg-short { width: 283px; height: 242px; }
+
+.admin-right-cards .admin-right-title-blood,
+.admin-right-cards .admin-right-title-money,
+.admin-right-cards .admin-right-title-clothes,
+.admin-right-cards .admin-right-title-food,
+.admin-right-cards .admin-right-title-items,
+.admin-right-cards .admin-right-title-mixed {
+  color: #ffffff;
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 32px;
+  font-weight: 700;
+  left: 20px;
+  line-height: normal;
+  position: absolute;
+  top: 29px;
+}
+
+.admin-right-cards .admin-right-card-content,
+.admin-right-cards .admin-right-content-frame,
+.admin-right-cards .admin-right-content-wrapper {
+  background-color: #a7a7a7;
+  border-radius: 15px;
+  display: flex;
+  height: 140px;
+  left: 24px;
+  position: absolute;
+  top: 80px;
+  width: 233px;
+}
+
+.admin-right-cards .admin-right-content-fill {
+  background-color: #a7a7a7;
+  border-radius: 15px;
+  height: 140px;
+  width: 233.25px;
+}

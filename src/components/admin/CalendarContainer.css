@@ -1,0 +1,206 @@
+.admin-calendar-container {
+  height: 769px;
+  position: absolute;
+  width: 587px;
+}
+
+.admin-calendar-container .admin-calendar-shell {
+  height: 769px;
+  position: absolute;
+  width: 589px;
+}
+
+.admin-calendar-container .admin-calendar-shell-bg {
+  -webkit-backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 51%, rgba(255, 255, 255, 0.1) 100%);
+  border-radius: 30px;
+  box-shadow:
+    0px 0px 42px #00000094,
+    inset 0px 50px 32px -35px #ffffff52,
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 1px 0 0 rgba(255, 255, 255, 0.32),
+    inset 0 -1px 33px rgba(0, 0, 0, 0.2),
+    inset -1px 0 33px rgba(0, 0, 0, 0.16);
+  height: 769px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 587px;
+}
+
+.admin-calendar-container .admin-calendar-new-event {
+  height: 70px;
+  left: 0;
+  position: absolute;
+  top: 671px;
+  width: 542px;
+}
+
+.admin-calendar-container .admin-calendar-new-event-main {
+  background-color: #a7a7a7;
+  border-radius: 35px;
+  height: 70px;
+  left: 1px;
+  position: absolute;
+  top: 1px;
+  width: 540px;
+}
+
+.admin-calendar-container .admin-calendar-new-event-side {
+  background-color: #7c7c7c;
+  border-radius: 0px 35px 35px 0px;
+  height: 70px;
+  left: 460px;
+  position: absolute;
+  top: 1px;
+  width: 80px;
+}
+
+.admin-calendar-container .admin-calendar-new-event-label {
+  color: #000000;
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 28px;
+  line-height: normal;
+  position: absolute;
+  top: 23px;
+}
+
+.admin-calendar-container .admin-calendar-new-event-icon {
+  color: #000000;
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 42px;
+  font-weight: 700;
+  left: 486px;
+  line-height: 1;
+  position: absolute;
+  top: 14px;
+}
+
+.admin-calendar-container .admin-calendar-panel {
+  background-color: #a7a7a7;
+  border-radius: 15px;
+  height: 623px;
+  left: 24px;
+  position: absolute;
+  top: 26px;
+  width: 540px;
+}
+
+.admin-calendar-container .admin-calendar-heading {
+  color: #ffffff;
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 96px;
+  font-weight: 700;
+  left: 52px;
+  line-height: normal;
+  position: absolute;
+  top: 29px;
+}
+
+.admin-calendar-container .admin-calendar-grid-wrap {
+  height: 497px;
+  left: 39px;
+  position: absolute;
+  top: 136px;
+  width: 511px;
+}
+
+.admin-calendar-container .admin-calendar-grid {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-sizing: border-box;
+  height: 497px;
+  padding: 18px 24px 20px;
+  width: 509px;
+}
+
+.admin-calendar-container .calendar-header-row {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 44px 1fr 44px;
+  gap: 10px;
+  height: 44px;
+}
+
+.admin-calendar-container .calendar-arrow-button {
+  align-items: center;
+  background-color: #d9d9d9;
+  border: 0;
+  border-radius: 15px;
+  box-shadow: 0px 3px 15px #0000001a;
+  cursor: pointer;
+  display: flex;
+  height: 44px;
+  justify-content: center;
+  padding: 0;
+  width: 44px;
+}
+
+.admin-calendar-container .calendar-arrow-icon {
+  height: 18px;
+  width: 12px;
+}
+
+.admin-calendar-container .calendar-month-title {
+  color: #000000;
+  font-family: "Inter-Bold", Helvetica;
+  font-size: clamp(24px, 2vw, 36px);
+  font-weight: 700;
+  line-height: 1;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin-calendar-container .calendar-divider {
+  background-color: #8c8c8c;
+  height: 1px;
+  margin: 14px 0 12px;
+  width: 100%;
+}
+
+.admin-calendar-container .calendar-weekdays {
+  color: #757575;
+  display: grid;
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 16px;
+  font-weight: 700;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.admin-calendar-container .calendar-weekday {
+  line-height: 1.6;
+}
+
+.admin-calendar-container .calendar-days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  height: 330px;
+}
+
+.admin-calendar-container .calendar-day-cell {
+  align-items: center;
+  border-radius: 10px;
+  color: #000000;
+  display: flex;
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 16px;
+  font-weight: 700;
+  justify-content: center;
+}
+
+.admin-calendar-container .calendar-day-cell.is-outside-month {
+  color: #8c8c8c;
+}
+
+.admin-calendar-container .calendar-day-cell.is-today {
+  border: 3px solid #880d1e;
+  color: #880d1e;
+}

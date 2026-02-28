@@ -1,0 +1,127 @@
+.featured-event-box {
+  height: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+
+.featured-event-box .featured-event {
+  height: 377px;
+  left: 116px;
+  position: absolute;
+  top: 133px;
+  width: 1687px;
+}
+
+.featured-event-box .right-arrow {
+  height: 60px;
+  left: calc(100% + 22px);
+  position: absolute;
+  top: 158px;
+  width: 35px;
+}
+
+.featured-event-box .left-arrow {
+  height: 60px;
+  left: -58px;
+  position: absolute;
+  top: 158px;
+  width: 35px;
+}
+
+.featured-event-box .featured-event-content {
+  height: 377px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1687px;
+}
+
+.featured-event-box .featured-event-frame {
+  background-color: #c79723;
+  border-radius: 20px;
+  box-shadow: 0px 20px 0px #765916;
+  height: 366px;
+  left: 0;
+  position: absolute;
+  top: 11px;
+  width: 1687px;
+}
+
+.featured-event-box .featured-event-image-layer {
+  -webkit-backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  background-color: #00000001;
+  background-image: url("../../assets/guest/placeholder_img.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow:
+    0px 0px 42px #00000094, inset 0px 30px 12px #ffffff52, inset 0 1px 0 rgba(
+      255,
+      255,
+      255,
+      0.4
+    ), inset 1px 0 0 rgba(255, 255, 255, 0.32), inset 0 -1px 33px rgba(
+      0,
+      0,
+      0,
+      0.2
+    ), inset -1px 0 33px rgba(0, 0, 0, 0.16);
+  height: 366px;
+  left: 0;
+  position: absolute;
+  top: 11px;
+  width: 1687px;
+}
+
+.featured-event-box .featured-event-logo {
+  aspect-ratio: 1.5;
+  height: 133px;
+  left: 6px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 200px;
+}
+
+.featured-event-box .featured-event-title {
+  color: #ffffff;
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 96px;
+  font-weight: 700;
+  left: 29px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 108px;
+  width: 713px;
+}
+
+.featured-event-box .featured-event-description {
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  left: 29px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 213px;
+  width: 445px;
+}
+
+.featured-event-box .featured-event-details {
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  left: 29px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-decoration: underline;
+  top: 326px;
+  width: 94px;
+}

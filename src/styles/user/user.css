@@ -1,0 +1,135 @@
+.user-scale-wrapper {
+  align-items: flex-start;
+  background-color: #1b1a16;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  min-height: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.user-stage {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.user {
+  --section-title-size: clamp(40px, 2.4vw, 46px);
+  background-color: #1b1a16;
+  height: 1080px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform-origin: top left;
+  width: 1920px;
+}
+
+.user .user-new-donation-button {
+  height: 70px;
+  left: 116px;
+  position: absolute;
+  top: 41px;
+  width: 70px;
+}
+
+.user .user-search {
+  height: 70px;
+  left: 777px;
+  position: absolute;
+  top: 41px;
+  width: 477px;
+}
+
+.user .user-search-field {
+  -webkit-backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  background-color: #d9d9d933;
+  border-radius: 10px;
+  box-shadow:
+    0px 0px 42px #00000094, inset 0px 50px 32px -35px #ffffff52, inset 0 1px 0 rgba(
+      255,
+      255,
+      255,
+      0.4
+    ), inset 1px 0 0 rgba(255, 255, 255, 0.32), inset 0 -1px 33px rgba(
+      0,
+      0,
+      0,
+      0.2
+    ), inset -1px 0 33px rgba(0, 0, 0, 0.16);
+  height: 70px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 475px;
+}
+
+.user .user-search-action {
+  -webkit-backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  background-color: #92929233;
+  border-radius: 0px 10px 10px 0px;
+  box-shadow:
+    0px 0px 42px #00000094, inset 0px 50px 32px -35px #ffffff52, inset 0 1px 0 rgba(
+      255,
+      255,
+      255,
+      0.4
+    ), inset 1px 0 0 rgba(255, 255, 255, 0.32), inset 0 -1px 33px rgba(
+      0,
+      0,
+      0,
+      0.2
+    ), inset -1px 0 33px rgba(0, 0, 0, 0.16);
+  height: 70px;
+  left: 405px;
+  position: absolute;
+  top: 0;
+  width: 70px;
+}
+
+.user .user-search-icon {
+  height: 41px;
+  left: calc(50% + 180px);
+  position: absolute;
+  top: calc(50% - 20px);
+  width: 41px;
+}
+
+.user .user-search-label {
+  color: #ffffff;
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 23px;
+  width: 101px;
+}
+
+.user .user-manage-button {
+  height: 70px;
+  left: 211px;
+  position: absolute;
+  top: 41px;
+  width: 70px;
+}
+
+.user .user-my-claims-button {
+  height: 70px;
+  left: 1638px;
+  position: absolute;
+  top: 41px;
+  width: 70px;
+}
+
+.user .user-menu-button {
+  height: 70px;
+  left: 1733px;
+  position: absolute;
+  top: 41px;
+  width: 70px;
+}

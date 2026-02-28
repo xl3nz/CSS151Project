@@ -1,0 +1,380 @@
+.login-modal {
+  height: 1080px;
+  left: 0;
+  min-width: 1920px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 1920px;
+  z-index: 2000;
+}
+
+.login-modal .login-modal-backdrop {
+  -webkit-backdrop-filter: blur(12.5px) brightness(100%) saturate(105%);
+  backdrop-filter: blur(12.5px) brightness(100%) saturate(105%);
+  background-color: #3c3c3c1a;
+  border: 1px solid #000000;
+  border-radius: 17px;
+  box-shadow:
+    inset 0px 50px 32px -35px #ffffff52,
+    0px 4px 42.2px #00000040,
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 1px 0 0 rgba(255, 255, 255, 0.32),
+    inset 0 -1px 8px rgba(0, 0, 0, 0.2),
+    inset -1px 0 8px rgba(0, 0, 0, 0.16);
+  height: 1080px;
+  left: -6px;
+  position: absolute;
+  top: 0;
+  width: 1920px;
+  z-index: 1;
+}
+
+.login-modal .login-modal-shell {
+  background-color: #d9d9d9;
+  border-radius: 17px;
+  display: flex;
+  height: 851px;
+  left: 446px;
+  position: absolute;
+  top: 114px;
+  width: 1015px;
+  z-index: 2;
+}
+
+.login-modal .login-modal-shell-surface {
+  -webkit-backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  background-color: #d9d9d933;
+  border: 1px solid #000000;
+  border-radius: 17px;
+  box-shadow:
+    inset 0px 50px 32px -35px #ffffff52,
+    0px 4px 42.2px #00000040,
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 1px 0 0 rgba(255, 255, 255, 0.32),
+    inset 0 -1px 33px rgba(0, 0, 0, 0.2),
+    inset -1px 0 33px rgba(0, 0, 0, 0.16);
+  height: 851px;
+  width: 1015px;
+}
+
+.login-modal .login-modal-content {
+  height: 762px;
+  left: 530px;
+  position: absolute;
+  top: 159px;
+  width: 877px;
+  z-index: 3;
+}
+
+.login-modal .login-modal-image-panel {
+  -webkit-backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  background-color: #6d0a1833;
+  border: none;
+  border-radius: 62px 20px 62px 62px;
+  box-shadow:
+    inset 0px 10px 12px #ffffff52,
+    0px 0px 42px #00000094,
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 1px 0 0 rgba(255, 255, 255, 0.32),
+    inset 0 -1px 33px rgba(0, 0, 0, 0.2),
+    inset -1px 0 33px rgba(0, 0, 0, 0.16);
+  height: 762px;
+  left: 399px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 460px;
+}
+
+.login-modal .login-modal-image-panel::before {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  background: linear-gradient(180deg, rgba(73, 0, 1, 0.5) 56%, rgba(73, 0, 1, 1) 100%);
+  border-radius: 62px 10px 62px 62px;
+  content: "";
+  inset: 0;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.login-modal .login-modal-image {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.login-modal .login-modal-heading {
+  align-items: center;
+  color: transparent;
+  display: flex;
+  gap: 6px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 30px;
+  font-weight: 600;
+  justify-content: center;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 60px;
+  white-space: nowrap;
+  width: 316px;
+}
+
+.login-modal .login-modal-heading-welcome {
+  color: #fddb0b;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.login-modal .login-modal-heading-back {
+  color: #880d1e;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.login-modal .login-modal-subtitle {
+  color: #000000;
+  font-family: "Inter-Medium", Helvetica;
+  font-size: 22px;
+  font-weight: 500;
+  left: 65px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 353px;
+  width: 186px;
+}
+
+.login-modal .login-modal-social-title {
+  color: #000000;
+  font-family: "Inter-Medium", Helvetica;
+  font-size: 20px;
+  font-weight: 500;
+  left: 100px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 130px;
+  width: 116px;
+}
+
+.login-modal .login-modal-signup-row {
+  align-items: center;
+  color: #000000;
+  display: inline-flex;
+  font-family: "Inter-Medium", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  gap: 4px;
+  justify-content: center;
+  left: 0;
+  line-height: 1;
+  position: absolute;
+  text-align: left;
+  top: 735px;
+  white-space: nowrap;
+  width: 305px;
+}
+
+.login-modal .login-modal-signup-link {
+  background: transparent;
+  border: 0;
+  color: #880d1e;
+  cursor: pointer;
+  display: inline;
+  font-family: "Inter-ExtraLight Italic", Helvetica;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.login-modal .login-modal-divider-label {
+  color: #000000;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 22px;
+  font-weight: 400;
+  left: 143px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 295px;
+  width: 29px;
+}
+
+.login-modal .login-modal-social-btn {
+  align-items: center;
+  background-color: #757575;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  height: 73px;
+  justify-content: center;
+  padding: 0;
+  position: absolute;
+  top: 172px;
+  width: 76px;
+}
+
+.login-modal .login-modal-social-btn-apple { left: 0; }
+.login-modal .login-modal-social-btn-google { left: 120px; }
+.login-modal .login-modal-social-btn-facebook { left: 240px; }
+
+.login-modal .login-modal-social-icon {
+  height: 36px;
+  object-fit: contain;
+  width: 36px;
+}
+
+.login-modal .login-modal-submit-background {
+  background-color: #880d1e;
+  border-radius: 30px;
+  height: 73px;
+  left: 0;
+  position: absolute;
+  top: 637px;
+  width: 305px;
+}
+
+.login-modal .login-modal-password-background {
+  background-color: #757575;
+  border-radius: 30px;
+  height: 73px;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  top: 489px;
+  width: 305px;
+}
+
+.login-modal .login-modal-email-background {
+  background-color: #757575;
+  border-radius: 30px;
+  height: 73px;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  top: 402px;
+  width: 305px;
+}
+
+.login-modal .login-modal-divider-left,
+.login-modal .login-modal-divider-right {
+  background-color: #000000;
+  height: 2px;
+  position: absolute;
+  top: 308px;
+  width: 120px;
+  z-index: 2;
+}
+
+.login-modal .login-modal-divider-left { left: 0; }
+.login-modal .login-modal-divider-right { left: 196px; }
+
+.login-modal .login-modal-email-input {
+  background: transparent;
+  border: 0;
+  color: #c71029;
+  font-family: "Inter-Medium", Helvetica;
+  font-size: 22px;
+  font-weight: 500;
+  left: 24px;
+  line-height: normal;
+  outline: none;
+  padding: 0;
+  position: absolute;
+  text-align: left;
+  top: 425px;
+  width: 257px;
+}
+
+.login-modal .login-modal-password-input {
+  background: transparent;
+  border: 0;
+  color: #c71029;
+  font-family: "Inter-Medium", Helvetica;
+  font-size: 22px;
+  font-weight: 500;
+  left: 24px;
+  line-height: normal;
+  outline: none;
+  padding: 0;
+  position: absolute;
+  text-align: left;
+  top: 512px;
+  width: 257px;
+}
+
+.login-modal .login-modal-submit-button {
+  background: transparent;
+  border: 0;
+  color: #000000;
+  cursor: pointer;
+  font-family: "Inter-Medium", Helvetica;
+  font-size: 22px;
+  font-weight: 500;
+  height: 73px;
+  left: 0;
+  line-height: normal;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  top: 637px;
+  width: 305px;
+}
+
+.login-modal .login-modal-remember-row {
+  align-items: center;
+  display: inline-flex;
+  gap: 10px;
+  left: 0;
+  position: absolute;
+  top: 577px;
+  width: 305px;
+}
+
+.login-modal .login-modal-remember-checkbox {
+  appearance: none;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), #880d1e;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  cursor: pointer;
+  height: 18px;
+  margin: 0;
+  width: 18px;
+}
+
+.login-modal .login-modal-remember-checkbox:checked {
+  box-shadow: inset 0 0 0 4px #f2f2f2;
+}
+
+.login-modal .login-modal-remember-label {
+  color: #000000;
+  font-family: "Inter-Medium", Helvetica;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.login-modal .login-modal-close {
+  cursor: pointer;
+  height: 50px;
+  left: 1338px;
+  position: absolute;
+  top: 160px;
+  width: 51px;
+  z-index: 4;
+}

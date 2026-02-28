@@ -1,0 +1,258 @@
+.admin-scale-wrapper {
+  align-items: flex-start;
+  background-color: #1b1a16;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  min-height: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.admin-stage {
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.admin-transform-layer {
+  height: 1080px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform-origin: top left;
+  width: 1920px;
+}
+
+.admin-page {
+  background-color: #1b1a16;
+  height: 1080px;
+  position: relative;
+  width: 1920px;
+}
+
+.admin-page .admin-content-panel {
+  background-color: #353535;
+  border-radius: 25px;
+  height: 1010px;
+  margin-left: 37px;
+  margin-top: 35px;
+  position: relative;
+  width: 1845px;
+}
+
+.admin-page .admin-content-overlay {
+  -webkit-backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 55%, rgba(255, 255, 255, 0.1) 100%);
+  border-radius: 25px;
+  box-shadow:
+    inset 0px 50px 32px -35px #ffffff52,
+    0px 0px 42px #00000094,
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 1px 0 0 rgba(255, 255, 255, 0.32),
+    inset 0 -1px 33px rgba(0, 0, 0, 0.2),
+    inset -1px 0 33px rgba(0, 0, 0, 0.16);
+  height: 1010px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1845px;
+}
+
+.admin-page .admin-content-overlay::before {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 56%, rgba(255, 255, 255, 1) 100%);
+  border-radius: 25px;
+  content: "";
+  inset: 0;
+  mask-composite: exclude;
+  padding: 2px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.admin-page .admin-brand-block {
+  height: 114px;
+  left: 11px;
+  position: absolute;
+  top: 19px;
+  width: 171px;
+}
+
+.admin-page .admin-brand-surface {
+  -webkit-backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  background-color: #a6a6a633;
+  border-radius: 20px;
+  box-shadow:
+    0px 0px 42px #00000094,
+    inset 0px 50px 32px -35px #ffffff52,
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 1px 0 0 rgba(255, 255, 255, 0.32),
+    inset 0 -1px 33px rgba(0, 0, 0, 0.2),
+    inset -1px 0 33px rgba(0, 0, 0, 0.16);
+  height: 70px;
+  left: 12px;
+  position: absolute;
+  top: 16px;
+  width: 154px;
+}
+
+.admin-page .admin-brand-image {
+  aspect-ratio: 1.5;
+  height: 114px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 171px;
+}
+
+.admin-page .admin-search {
+  height: 70px;
+  left: 685px;
+  position: absolute;
+  top: 41px;
+  width: 477px;
+}
+
+.admin-page .admin-search-field {
+  -webkit-backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  background-color: #a7a7a733;
+  border-radius: 20px;
+  box-shadow:
+    0px 0px 42px #00000094,
+    inset 0px 50px 32px -35px #ffffff52,
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 1px 0 0 rgba(255, 255, 255, 0.32),
+    inset 0 -1px 33px rgba(0, 0, 0, 0.2),
+    inset -1px 0 33px rgba(0, 0, 0, 0.16);
+  height: 70px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 475px;
+}
+
+.admin-page .admin-search-action {
+  -webkit-backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  background-color: #7c7c7c33;
+  border-radius: 0px 20px 20px 0px;
+  box-shadow:
+    0px 0px 42px #00000094,
+    inset 0px 50px 32px -35px #ffffff52,
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 1px 0 0 rgba(255, 255, 255, 0.32),
+    inset 0 -1px 33px rgba(0, 0, 0, 0.2),
+    inset -1px 0 33px rgba(0, 0, 0, 0.16);
+  height: 70px;
+  left: 405px;
+  position: absolute;
+  top: 0;
+  width: 70px;
+}
+
+.admin-page .admin-search-icon {
+  height: 41px;
+  left: calc(50% + 180px);
+  position: absolute;
+  top: calc(50% - 20px);
+  width: 41px;
+}
+
+.admin-page .admin-search-label {
+  color: #ffffff;
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 24px;
+  line-height: normal;
+  position: absolute;
+  top: 23px;
+  width: 101px;
+}
+
+.admin-page .admin-tab-events,
+.admin-page .admin-tab-announcements,
+.admin-page .admin-tab-reports {
+  height: 50px;
+  position: absolute;
+  top: 139px;
+}
+
+.admin-page .admin-tab-events {
+  left: 23px;
+  width: 102px;
+}
+
+.admin-page .admin-tab-announcements {
+  left: 300px;
+  width: 209px;
+}
+
+.admin-page .admin-tab-reports {
+  left: 149px;
+  width: 127px;
+}
+
+.admin-page .admin-tab-events-bg,
+.admin-page .admin-tab-announcements-bg,
+.admin-page .admin-tab-reports-bg {
+  -webkit-backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 51%, rgba(255, 255, 255, 0.1) 100%);
+  border-radius: 20px;
+  box-shadow:
+    0px 0px 42px #00000094,
+    inset 0px 50px 32px -35px #ffffff52,
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 1px 0 0 rgba(255, 255, 255, 0.32),
+    inset 0 -1px 33px rgba(0, 0, 0, 0.2),
+    inset -1px 0 33px rgba(0, 0, 0, 0.16);
+  height: 50px;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.admin-page .admin-tab-events-bg { width: 100px; }
+.admin-page .admin-tab-announcements-bg { width: 207px; }
+.admin-page .admin-tab-reports-bg { width: 125px; }
+
+.admin-page .admin-tab-events-label,
+.admin-page .admin-tab-announcements-label,
+.admin-page .admin-tab-reports-label {
+  color: #ffffff;
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+  position: absolute;
+  top: 12px;
+}
+
+.admin-page .admin-tab-events-label { left: 21px; }
+.admin-page .admin-tab-announcements-label { left: 21px; }
+.admin-page .admin-tab-reports-label { left: 23px; }
+
+.admin-page .admin-calendar-container {
+  left: 24px;
+  position: absolute;
+  top: 218px;
+}
+
+.admin-page .admin-center-cards {
+  left: 630px;
+  position: absolute;
+  top: 218px;
+}
+
+.admin-page .admin-right-cards {
+  left: 1236px;
+  position: absolute;
+  top: 218px;
+}

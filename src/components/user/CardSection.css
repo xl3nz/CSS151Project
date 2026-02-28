@@ -1,0 +1,286 @@
+.card-section-box {
+  height: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+
+.card-section-box .card-section-layout {
+  height: 477px;
+  left: 680px;
+  position: absolute;
+  top: 545px;
+  width: 1123px;
+}
+
+.card-section-box .card-section-tray {
+  height: 383px;
+  left: 0;
+  position: absolute;
+  top: 56px;
+  width: 1121px;
+}
+
+.card-section-box .card-section-tray-top {
+  background-color: #8d0024;
+  border-radius: 30px;
+  box-shadow: 0px 20px 0px #480001;
+  height: 132px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1121px;
+}
+
+.card-section-box .card-section-tray-bottom {
+  background-color: #8d0024;
+  border-radius: 30px;
+  box-shadow: 0px 20px 0px #480001;
+  height: 132px;
+  left: 0;
+  position: absolute;
+  top: 251px;
+  width: 1121px;
+}
+
+.card-section-box .card-section-tray-side {
+  background-color: #8d0024;
+  border-radius: 30px;
+  box-shadow: 0px 20px 0px #480001;
+  height: 343px;
+  left: 0;
+  position: absolute;
+  top: 40px;
+  width: 185px;
+}
+
+.card-section-box .card-section-title {
+  color: #ffffff;
+  font-family: "Inter-Bold", Helvetica;
+  font-size: var(--section-title-size, clamp(40px, 2.4vw, 46px));
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  width: max-content;
+}
+
+.card-section-box .card-section-cards {
+  height: 404px;
+  left: 46px;
+  position: absolute;
+  top: 73px;
+  width: 904px;
+}
+
+.card-section-box .donation-card-mixed {
+  height: 185px;
+  left: 1px;
+  position: absolute;
+  top: 0;
+  width: 210px;
+}
+
+.card-section-box .donation-card-base {
+  background-color: #e4e4e4;
+  border-radius: 20px;
+  box-shadow: 0px 20px 0px #7d7d7d;
+  height: 185px;
+  left: 1px;
+  position: absolute;
+  top: 0;
+  width: 208px;
+}
+
+.card-section-box .donation-card-overlay {
+  -webkit-backdrop-filter: blur(20px) brightness(100%) saturate(105%) hue-rotate(10deg);
+  backdrop-filter: blur(20px) brightness(100%) saturate(105%) hue-rotate(10deg);
+  background-color: #e5e5e51a;
+  border-radius: 20px;
+  box-shadow:
+    inset 0px 10px 12px #ffffff52,
+    0px 0px 42px #00000094,
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 1px 0 0 rgba(255, 255, 255, 0.32),
+    inset 0 -1px 13px rgba(0, 0, 0, 0.13),
+    inset -1px 0 13px rgba(0, 0, 0, 0.1);
+  height: 185px;
+  left: 1px;
+  position: absolute;
+  top: 0;
+  width: 208px;
+}
+
+.card-section-box .donation-card-image-frame {
+  background-color: #ffffff;
+  border-radius: 15px;
+  height: 138px;
+  left: 8px;
+  overflow: hidden;
+  position: absolute;
+  top: 6px;
+  width: 191px;
+}
+
+.card-section-box .donation-card-image {
+  clip-path: inset(42px round 15px);
+  height: 222px;
+  left: -34px;
+  object-fit: cover;
+  position: absolute;
+  top: -36px;
+  width: 275px;
+  z-index: 3;
+}
+
+.card-section-box .donation-card-label {
+  color: #000000;
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 72px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 150px;
+  width: 64px;
+}
+
+.card-section-box .donation-card-money {
+  height: 185px;
+  left: 348px;
+  position: absolute;
+  top: 0;
+  width: 210px;
+}
+
+.card-section-box .donation-card-base-alt {
+  background-color: #e4e4e4;
+  border-radius: 20px;
+  box-shadow: 0px 20px 0px #7d7d7d;
+  height: 185px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 208px;
+}
+
+.card-section-box .donation-card-overlay-alt {
+  -webkit-backdrop-filter: blur(20px) brightness(100%) saturate(105%) hue-rotate(10deg);
+  backdrop-filter: blur(20px) brightness(100%) saturate(105%) hue-rotate(10deg);
+  background-color: #e5e5e51a;
+  border-radius: 20px;
+  box-shadow:
+    inset 0px 10px 12px #ffffff52,
+    0px 0px 42px #00000094,
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 1px 0 0 rgba(255, 255, 255, 0.32),
+    inset 0 -1px 13px rgba(0, 0, 0, 0.13),
+    inset -1px 0 13px rgba(0, 0, 0, 0.1);
+  height: 185px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 208px;
+}
+
+.card-section-box .donation-card-label-money {
+  color: #000000;
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 68px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 150px;
+  width: 71px;
+}
+
+.card-section-box .donation-card-clothes {
+  height: 185px;
+  left: 348px;
+  position: absolute;
+  top: 219px;
+  width: 210px;
+}
+
+.card-section-box .donation-card-label-clothes {
+  color: #000000;
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 63px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 150px;
+  width: 82px;
+}
+
+.card-section-box .donation-card-items {
+  height: 185px;
+  left: 696px;
+  position: absolute;
+  top: 219px;
+  width: 210px;
+}
+
+.card-section-box .donation-card-label-items {
+  color: #000000;
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 75px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 150px;
+  width: 59px;
+}
+
+.card-section-box .donation-card-food {
+  height: 185px;
+  left: 696px;
+  position: absolute;
+  top: 0;
+  width: 210px;
+}
+
+.card-section-box .donation-card-label-food {
+  color: #000000;
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 78px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 150px;
+  width: 52px;
+}
+
+.card-section-box .donation-card-blood {
+  height: 185px;
+  left: 1px;
+  position: absolute;
+  top: 219px;
+  width: 210px;
+}
+
+.card-section-box .donation-card-label-blood {
+  color: #000000;
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 75px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 150px;
+  width: 60px;
+}

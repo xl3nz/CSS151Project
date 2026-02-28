@@ -1,0 +1,20 @@
+.calendar-weekday-item {
+  height: 42px;
+  position: relative;
+  width: 45px;
+}
+
+.calendar-weekday-item .calendar-weekday-label {
+  color: #757575;
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 16px;
+  font-weight: 700;
+  inset: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  white-space: nowrap;
+}

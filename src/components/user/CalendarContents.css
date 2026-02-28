@@ -1,0 +1,543 @@
+.calendar-contents-box {
+  height: 378px;
+  position: relative;
+  width: 416px;
+}
+
+.calendar-contents-box .calendar-contents {
+  height: 378px;
+  left: 139px;
+  position: fixed;
+  top: 626px;
+  width: 418px;
+}
+
+.calendar-contents-box .calendar-contents-surface {
+  background-color: #ffffff;
+  border-radius: 15px;
+  height: 378px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 416px;
+}
+
+.calendar-contents-box .marker {
+  border: 2.27px solid;
+  border-color: #880d1e;
+  border-radius: 7.58px;
+  box-shadow: 0px 3.03px 3.03px #00000040;
+  height: 32px;
+  left: 138px;
+  position: absolute;
+  top: 176px;
+  width: 34px;
+}
+
+.calendar-contents-box .calendar-right-arrow {
+  background-color: #d9d9d9;
+  border-radius: 15.17px;
+  box-shadow: 0px 3.03px 15.17px #0000001a;
+  display: flex;
+  height: 44px;
+  left: 340px;
+  position: absolute;
+  top: 13px;
+  width: 44px;
+}
+
+.calendar-contents-box .r-vector {
+  flex: 1;
+  width: 9.22px;
+}
+
+.calendar-contents-box .calendar-left-arrow {
+  background-color: #d9d9d9;
+  border-radius: 15.17px;
+  box-shadow: 0px 3.03px 15.17px #0000001a;
+  display: flex;
+  height: 44px;
+  left: 32px;
+  position: absolute;
+  top: 13px;
+  transform: rotate(180deg);
+  width: 44px;
+}
+
+.calendar-contents-box .l-vector {
+  flex: 1;
+  transform: rotate(-180deg);
+  width: 9.22px;
+}
+
+.calendar-contents-box .calendar-contents-month-title {
+  color: #000000;
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 27.3px;
+  font-weight: 700;
+  left: 127px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 20px;
+  white-space: nowrap;
+  width: 163px;
+}
+
+.calendar-contents-box .line {
+  height: 1px;
+  left: 34px;
+  position: absolute;
+  top: 76px;
+  width: 350px;
+}
+
+.calendar-contents-box .days-instance {
+  height: 32px !important;
+  left: 32px !important;
+  position: absolute !important;
+  top: 94px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .design-component-instance-node {
+  font-size: 12.1px !important;
+  height: 47.10% !important;
+  left: 22.83% !important;
+  text-align: center !important;
+  white-space: unset !important;
+  width: 55.68% !important;
+}
+
+.calendar-contents-box .days-2 {
+  height: 32px !important;
+  left: 85px !important;
+  position: absolute !important;
+  top: 94px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .days-3 {
+  font-size: 12.1px !important;
+  height: 47.10% !important;
+  left: 28.69% !important;
+  text-align: center !important;
+  white-space: unset !important;
+  width: 43.96% !important;
+}
+
+.calendar-contents-box .days-4 {
+  height: 32px !important;
+  left: 138px !important;
+  position: absolute !important;
+  top: 94px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .days-5 {
+  font-size: 12.1px !important;
+  height: 47.10% !important;
+  text-align: center !important;
+  white-space: unset !important;
+  width: 79.12% !important;
+}
+
+.calendar-contents-box .days-6 {
+  height: 32px !important;
+  left: 191px !important;
+  position: absolute !important;
+  top: 94px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .days-7 {
+  font-size: 12.1px !important;
+  height: 47.10% !important;
+  left: 25.76% !important;
+  text-align: center !important;
+  white-space: unset !important;
+  width: 46.89% !important;
+}
+
+.calendar-contents-box .days-8 {
+  height: 32px !important;
+  left: 244px !important;
+  position: absolute !important;
+  top: 94px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .days-9 {
+  font-size: 12.1px !important;
+  height: 47.10% !important;
+  left: 31.62% !important;
+  text-align: center !important;
+  white-space: unset !important;
+  width: 35.17% !important;
+}
+
+.calendar-contents-box .days-10 {
+  height: 32px !important;
+  left: 297px !important;
+  position: absolute !important;
+  top: 94px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .days-11 {
+  height: 32px !important;
+  left: 350px !important;
+  position: absolute !important;
+  top: 94px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-instance {
+  height: 32px !important;
+  left: 32px !important;
+  position: absolute !important;
+  top: 135px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-2 {
+  color: #8c8c8c !important;
+  font-size: 12.1px !important;
+}
+
+.calendar-contents-box .number-3 {
+  height: 32px !important;
+  left: 85px !important;
+  position: absolute !important;
+  top: 135px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-4 {
+  height: 32px !important;
+  left: 138px !important;
+  position: absolute !important;
+  top: 135px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-5 {
+  height: 32px !important;
+  left: 191px !important;
+  position: absolute !important;
+  top: 135px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-6 {
+  height: 32px !important;
+  left: 244px !important;
+  position: absolute !important;
+  top: 135px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-7 {
+  height: 32px !important;
+  left: 297px !important;
+  position: absolute !important;
+  top: 135px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-8 {
+  height: 32px !important;
+  left: 350px !important;
+  position: absolute !important;
+  top: 135px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-9 {
+  font-size: 12.1px !important;
+}
+
+.calendar-contents-box .number-10 {
+  height: 32px !important;
+  left: 350px !important;
+  position: absolute !important;
+  top: 176px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-11 {
+  height: 32px !important;
+  left: 297px !important;
+  position: absolute !important;
+  top: 176px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-12 {
+  height: 32px !important;
+  left: 244px !important;
+  position: absolute !important;
+  top: 176px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-13 {
+  height: 32px !important;
+  left: 244px !important;
+  position: absolute !important;
+  top: 217px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-14 {
+  height: 32px !important;
+  left: 297px !important;
+  position: absolute !important;
+  top: 217px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-15 {
+  height: 32px !important;
+  left: 350px !important;
+  position: absolute !important;
+  top: 217px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-16 {
+  height: 32px !important;
+  left: 244px !important;
+  position: absolute !important;
+  top: 258px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-17 {
+  height: 32px !important;
+  left: 297px !important;
+  position: absolute !important;
+  top: 258px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-18 {
+  height: 32px !important;
+  left: 350px !important;
+  position: absolute !important;
+  top: 258px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-19 {
+  height: 32px !important;
+  left: 191px !important;
+  position: absolute !important;
+  top: 258px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-20 {
+  height: 32px !important;
+  left: 138px !important;
+  position: absolute !important;
+  top: 258px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-21 {
+  height: 32px !important;
+  left: 85px !important;
+  position: absolute !important;
+  top: 258px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-22 {
+  height: 32px !important;
+  left: 32px !important;
+  position: absolute !important;
+  top: 258px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-23 {
+  height: 32px !important;
+  left: 244px !important;
+  position: absolute !important;
+  top: 322px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-24 {
+  height: 32px !important;
+  left: 297px !important;
+  position: absolute !important;
+  top: 322px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-25 {
+  height: 32px !important;
+  left: 350px !important;
+  position: absolute !important;
+  top: 322px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-26 {
+  height: 32px !important;
+  left: 191px !important;
+  position: absolute !important;
+  top: 322px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-27 {
+  height: 32px !important;
+  left: 138px !important;
+  position: absolute !important;
+  top: 322px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-28 {
+  height: 32px !important;
+  left: 85px !important;
+  position: absolute !important;
+  top: 322px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-29 {
+  height: 32px !important;
+  left: 32px !important;
+  position: absolute !important;
+  top: 322px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-30 {
+  height: 32px !important;
+  left: 244px !important;
+  position: absolute !important;
+  top: 290px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-31 {
+  height: 32px !important;
+  left: 297px !important;
+  position: absolute !important;
+  top: 290px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-32 {
+  height: 32px !important;
+  left: 350px !important;
+  position: absolute !important;
+  top: 290px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-33 {
+  height: 32px !important;
+  left: 191px !important;
+  position: absolute !important;
+  top: 290px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-34 {
+  height: 32px !important;
+  left: 138px !important;
+  position: absolute !important;
+  top: 290px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-35 {
+  height: 32px !important;
+  left: 85px !important;
+  position: absolute !important;
+  top: 290px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-36 {
+  height: 32px !important;
+  left: 32px !important;
+  position: absolute !important;
+  top: 290px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-37 {
+  height: 32px !important;
+  left: 191px !important;
+  position: absolute !important;
+  top: 176px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-38 {
+  height: 32px !important;
+  left: 191px !important;
+  position: absolute !important;
+  top: 217px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-39 {
+  height: 32px !important;
+  left: 138px !important;
+  position: absolute !important;
+  top: 176px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-40 {
+  color: #880d1e !important;
+  font-size: 12.1px !important;
+}
+
+.calendar-contents-box .number-41 {
+  height: 32px !important;
+  left: 32px !important;
+  position: absolute !important;
+  top: 217px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-42 {
+  height: 32px !important;
+  left: 85px !important;
+  position: absolute !important;
+  top: 217px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-43 {
+  height: 32px !important;
+  left: 138px !important;
+  position: absolute !important;
+  top: 217px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-44 {
+  height: 32px !important;
+  left: 85px !important;
+  position: absolute !important;
+  top: 176px !important;
+  width: 34px !important;
+}
+
+.calendar-contents-box .number-45 {
+  height: 32px !important;
+  left: 32px !important;
+  position: absolute !important;
+  top: 176px !important;
+  width: 34px !important;
+}

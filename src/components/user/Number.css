@@ -1,0 +1,48 @@
+.calendar-day-number {
+  height: 42px;
+  position: relative;
+  width: 45px;
+}
+
+.calendar-day-number .calendar-day-number-highlight {
+  background-color: #d9d9d9;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+}
+
+.calendar-day-number .calendar-day-number-label {
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 16px;
+  font-weight: 700;
+  inset: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.calendar-day-number.variant-3 {
+  background-color: #880d1e;
+}
+
+.calendar-day-number.variant-2 {
+  background-color: #880d1e1c;
+}
+
+.calendar-day-number.default .calendar-day-number-label {
+  color: #000000;
+}
+
+.calendar-day-number.variant-3 .calendar-day-number-label {
+  color: #ffffff;
+}
+
+.calendar-day-number.variant-2 .calendar-day-number-label {
+  color: #880d1e;
+}

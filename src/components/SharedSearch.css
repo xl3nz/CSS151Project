@@ -1,0 +1,73 @@
+.shared-search {
+  height: 70px;
+  position: relative;
+  width: 475px;
+  cursor: pointer;
+}
+
+.shared-search .shared-search-shell {
+  height: 70px;
+  left: 0;
+  position: relative;
+  top: 0;
+  width: 477px;
+}
+
+.shared-search .shared-search-field {
+  -webkit-backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  background-color: #d9d9d933;
+  border-radius: 10px;
+  box-shadow:
+    0 0 42px #00000094,
+    inset 0 50px 32px -35px #ffffff52,
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 1px 0 0 rgba(255, 255, 255, 0.32),
+    inset 0 -1px 33px rgba(0, 0, 0, 0.2),
+    inset -1px 0 33px rgba(0, 0, 0, 0.16);
+  height: 70px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 475px;
+}
+
+.shared-search .shared-search-action {
+  -webkit-backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  backdrop-filter: blur(50px) brightness(100%) saturate(105%);
+  background-color: #92929233;
+  border-radius: 0 10px 10px 0;
+  box-shadow:
+    0 0 42px #00000094,
+    inset 0 50px 32px -35px #ffffff52,
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 1px 0 0 rgba(255, 255, 255, 0.32),
+    inset 0 -1px 33px rgba(0, 0, 0, 0.2),
+    inset -1px 0 33px rgba(0, 0, 0, 0.16);
+  height: 70px;
+  left: 405px;
+  position: absolute;
+  top: 0;
+  width: 70px;
+}
+
+.shared-search .shared-search-icon {
+  height: 41px;
+  left: calc(50% + 180px);
+  position: absolute;
+  top: calc(50% - 20px);
+  width: 41px;
+}
+
+.shared-search .shared-search-label {
+  color: #ffffff;
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 23px;
+  width: 101px;
+}
