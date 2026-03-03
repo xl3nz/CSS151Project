@@ -1,16 +1,10 @@
-import leftArrow from '../../assets/user/left-arrow.png';
 import logo from '../../assets/user/logo.png';
-import rightArrow from '../../assets/user/right-arrow.png';
 import './FeaturedEvent.css';
 
 export const FeaturedEvent = () => {
   return (
     <div className="featured-event-box">
       <div className="featured-event">
-        <img className="right-arrow" alt="Right arrow" src={rightArrow} />
-
-        <img className="left-arrow" alt="Left arrow" src={leftArrow} />
-
         <div className="featured-event-content">
           <div className="featured-event-frame" />
 

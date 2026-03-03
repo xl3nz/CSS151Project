@@ -43,7 +43,7 @@ export default function Guest() {
   const close = () => setOpenModal(null);
 
   return (
-    <div className="guest-scale-wrapper" ref={wrapperRef} style={{ height: `${viewportHeight}px` }}>
+    <div className="guest-scale-wrapper" ref={wrapperRef} style={{ height: '100vh' }}>
       <div
         className="guest-scale-stage"
         style={{

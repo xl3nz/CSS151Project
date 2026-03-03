@@ -207,70 +207,37 @@
 }
 
 .register-modal .register-modal-submit-group {
-  height: 241px;
+  height: 73px;
   left: 17px;
   position: absolute;
-  top: 198px;
+  top: 368px;
   width: 645px;
 }
 
 .register-modal .register-modal-submit-background {
   background-color: #880d1e;
+  border: none;
   border-radius: 15px;
+  cursor: pointer;
   height: 73px;
   left: 0;
   position: absolute;
-  top: 168px;
-  width: 639px;
-}
-
-.register-modal .register-modal-submit-label,
-.register-modal .register-modal-email-label,
-.register-modal .register-modal-password-label,
-.register-modal .register-modal-name-label {
-  color: #fddb0b;
-  font-family: "Inter-Medium", Helvetica;
-  font-size: 22px;
-  font-weight: 500;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-}
-
-.register-modal .register-modal-submit-label {
-  left: 268px;
-  top: 191px;
-  width: 103px;
-}
-
-.register-modal .register-modal-email-label {
-  left: 7px;
   top: 0;
-  width: 103px;
+  width: 639px;
+  transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
-.register-modal .register-modal-password-label {
-  left: 30px;
-  top: 93px;
-  width: 103px;
+.register-modal .register-modal-submit-background:hover {
+  background-color: #6d0a18;
 }
 
-.register-modal .register-modal-first-name-label-wrap,
-.register-modal .register-modal-last-name-label-wrap {
-  display: flex;
-  height: 27px;
-  position: absolute;
-  top: 98px;
-  width: 118px;
+.register-modal .register-modal-submit-background:active {
+  transform: scale(0.98);
 }
 
-.register-modal .register-modal-first-name-label-wrap { left: 41px; }
-.register-modal .register-modal-last-name-label-wrap { left: 371px; }
-
-.register-modal .register-modal-name-label {
-  height: 27px;
-  position: static;
-  width: 116px;
+.register-modal .register-modal-submit-background:focus {
+  outline: 2px solid #fddb0b;
+  outline-offset: 2px;
 }
 
 .register-modal .register-modal-social-block {
@@ -347,4 +314,66 @@
   top: 167px;
   width: 51px;
   z-index: 4;
+}
+
+/* New styles for form inputs */
+.register-modal .register-modal-input {
+  background: transparent;
+  border: none;
+  color: #fddb0b;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 22px;
+  font-weight: 400;
+  height: 100%;
+  left: 15px;
+  outline: none;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: calc(100% - 30px);
+  z-index: 2;
+}
+
+.register-modal .register-modal-input::placeholder {
+  color: #fddb0b;
+  opacity: 0.5;
+}
+
+/* Make background containers clickable */
+.register-modal .register-modal-last-name-background,
+.register-modal .register-modal-first-name-background,
+.register-modal .register-modal-email-background,
+.register-modal .register-modal-password-background {
+  cursor: text;
+  transition: opacity 0.2s ease;
+}
+
+.register-modal .register-modal-last-name-background:hover,
+.register-modal .register-modal-first-name-background:hover,
+.register-modal .register-modal-email-background:hover,
+.register-modal .register-modal-password-background:hover {
+  opacity: 0.7;
+}
+
+.register-modal .register-modal-submit-background:hover {
+  background-color: #6d0a18;
+}
+
+.register-modal .register-modal-submit-background:active {
+  transform: scale(0.98);
+}
+
+.register-modal .register-modal-submit-background:focus {
+  outline: 2px solid #fddb0b;
+  outline-offset: 2px;
+}
+
+.register-modal .register-modal-social-btn:hover {
+  background-color: #555555;
+  transform: scale(1.05);
+  transition: all 0.2s ease;
+}
+
+.register-modal .register-modal-social-btn:active {
+  transform: scale(0.95);
 }

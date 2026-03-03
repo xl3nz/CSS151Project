@@ -1,0 +1,73 @@
+-- 1. User Account Management (Process 1.0)
+CREATE TABLE Users (
+    user_id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    role ENUM('donor', 'recipient', 'foundation', 'admin') NOT NULL,
+    verification_status ENUM('pending', 'verified', 'rejected') DEFAULT 'pending',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 2. Donation Listing Management (Process 2.0)
+CREATE TABLE Donation_Listings (
+    listing_id INT PRIMARY KEY AUTO_INCREMENT,
+    donor_id INT,
+    title VARCHAR(100) NOT NULL,
+    description TEXT,
+    category VARCHAR(50),
+    quantity INT DEFAULT 1,
+    item_condition VARCHAR(50), -- e.g., New, Used, etc.
+    photo_url VARCHAR(255),
+    pickup_location VARCHAR(255),
+    availability_dates DATE,
+    status ENUM('available', 'pending', 'claimed', 'removed') DEFAULT 'available',
+    approval_status ENUM('pending', 'approved', 'rejected') DEFAULT 'pending',
+    FOREIGN KEY (donor_id) REFERENCES Users(user_id)
+);
+
+-- 3. Donation Claiming Handling (Process 3.0)
+CREATE TABLE Claims (
+    claim_id INT PRIMARY KEY AUTO_INCREMENT,
+    listing_id INT,
+    recipient_id INT,
+    claim_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    status ENUM('pending', 'accepted', 'rejected', 'completed') DEFAULT 'pending',
+    pickup_scheduled_at DATETIME,
+    FOREIGN KEY (listing_id) REFERENCES Donation_Listings(listing_id),
+    FOREIGN KEY (recipient_id) REFERENCES Users(user_id)
+);
+
+-- 4. Monetary Donation Processing (Process 4.0)
+CREATE TABLE Monetary_Transactions (
+    transaction_id INT PRIMARY KEY AUTO_INCREMENT,
+    donor_id INT,
+    amount DECIMAL(10, 2) NOT NULL,
+    cause_category VARCHAR(100), -- e.g., Disaster Relief, Charity
+    transaction_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    completion_status ENUM('pending', 'successful', 'failed') DEFAULT 'successful',
+    FOREIGN KEY (donor_id) REFERENCES Users(user_id)
+);
+
+-- 5. Notifications and Record Management (Process 5.0)
+CREATE TABLE Admin_Audit_Trail (
+    log_id INT PRIMARY KEY AUTO_INCREMENT,
+    admin_id INT,
+    action_type VARCHAR(100), -- e.g., Approve Listing, Resolve Dispute
+    target_id INT, -- ID of the listing or user involved
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    details TEXT,
+    geolocation_data VARCHAR(100),
+    FOREIGN KEY (admin_id) REFERENCES Users(user_id)
+);
+
+-- 6. User Disputes
+CREATE TABLE Disputes (
+    dispute_id INT PRIMARY KEY AUTO_INCREMENT,
+    claim_id INT,
+    reporter_id INT,
+    reason TEXT NOT NULL,
+    resolution_status ENUM('open', 'under_review', 'resolved') DEFAULT 'open',
+    FOREIGN KEY (claim_id) REFERENCES Claims(claim_id),
+    FOREIGN KEY (reporter_id) REFERENCES Users(user_id)
+);

@@ -46,8 +46,8 @@ const buildMonthCells = (date) => {
   return cells;
 };
 
-export const Calendar = () => {
-  const [viewDate, setViewDate] = useState(new Date(2026, 2, 1)); // March 2026 default
+export const Calendar = ({ onDateClick, events = [] }) => {
+  const [viewDate, setViewDate] = useState(new Date()); // Current date as default
   const today = new Date();
 
   const monthLabel = useMemo(
@@ -56,6 +56,26 @@ export const Calendar = () => {
   );
 
   const cells = useMemo(() => buildMonthCells(viewDate), [viewDate]);
+
+  // Helper function to check if a date has events
+  const hasEvents = (date) => {
+    return events.some(event => {
+      const eventDate = new Date(event.date);
+      return eventDate.getFullYear() === date.getFullYear() &&
+             eventDate.getMonth() === date.getMonth() &&
+             eventDate.getDate() === date.getDate();
+    });
+  };
+
+  // Helper function to get events for a specific date
+  const getEventsForDate = (date) => {
+    return events.filter(event => {
+      const eventDate = new Date(event.date);
+      return eventDate.getFullYear() === date.getFullYear() &&
+             eventDate.getMonth() === date.getMonth() &&
+             eventDate.getDate() === date.getDate();
+    });
+  };
 
   const goPrevMonth = () => {
     setViewDate((prev) => new Date(prev.getFullYear(), prev.getMonth() - 1, 1));
@@ -102,13 +122,22 @@ export const Calendar = () => {
                       cell.date.getFullYear() === today.getFullYear() &&
                       cell.date.getMonth() === today.getMonth() &&
                       cell.date.getDate() === today.getDate();
+                    
+                    const hasEvent = hasEvents(cell.date);
 
                     return (
                       <div
                         key={cell.date.toISOString()}
-                        className={`calendar-day-cell ${cell.inCurrentMonth ? 'is-current-month' : 'is-outside-month'} ${isToday ? 'is-today' : ''}`.trim()}
+                        className={`calendar-day-cell ${cell.inCurrentMonth ? 'is-current-month' : 'is-outside-month'} ${isToday ? 'is-today' : ''} ${hasEvent ? 'has-event' : ''}`.trim()}
+                        onClick={() => {
+                          if (hasEvent && onDateClick) {
+                            onDateClick(cell.date);
+                          }
+                        }}
+                        style={{ cursor: hasEvent && onDateClick ? 'pointer' : 'default' }}
                       >
                         {cell.day}
+                        {hasEvent && <div className="event-marker" />}
                       </div>
                     );
                   })}

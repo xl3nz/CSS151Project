@@ -165,3 +165,28 @@
   border: 2px solid #880d1e;
   color: #880d1e;
 }
+
+.calendar-box .calendar-day-cell.has-event {
+  position: relative;
+}
+
+.calendar-box .event-marker {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: #fddb0b;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.calendar-box .calendar-day-cell.is-today.has-event {
+  border: 2px solid #880d1e;
+  color: #880d1e;
+}
+
+.calendar-box .calendar-day-cell.is-today.has-event .event-marker {
+  background-color: #ffffff;
+  border: 1px solid #880d1e;
+}
