@@ -1,11 +1,23 @@
+import React, { useState } from 'react';
 import { CalendarContainer } from './CalendarContainer';
 import { CenterCards } from './CenterCards';
 import { RightCards } from './RightCards';
 import hLogo from '../../assets/user/logo.png';
-import primary from '../../assets/Primary.png';
 import './AdminPage.css';
 
-export const AdminPage = () => {
+export const AdminPage = ({ onLogout, onAddEvent, onDateClick, onRemoveEvent, onManageEvents, onOpenReports, onOpenAnnouncements }) => {
+  const handleLogout = () => {
+    if (onLogout) {
+      onLogout();
+    }
+  };
+
+  const handleManageEvents = () => {
+    if (onManageEvents) {
+      onManageEvents();
+    }
+  };
+
   return (
     <div className="admin-page">
       <div className="admin-content-panel">
@@ -13,35 +25,35 @@ export const AdminPage = () => {
 
         <div className="admin-brand-block">
           <div className="admin-brand-surface" />
-          <img className="admin-brand-image" alt="H logo" src={hLogo} />
+          <img 
+            className="admin-brand-image" 
+            alt="H logo" 
+            src={hLogo} 
+            onClick={handleLogout}
+            style={{ cursor: 'pointer' }}
+          />
         </div>
 
-        <div className="admin-search">
-          <div className="admin-search-field" />
-          <div className="admin-search-action" />
-          <img className="admin-search-icon" alt="Primary" src={primary} />
-          <div className="admin-search-label">Search</div>
-        </div>
 
-        <RightCards />
-        <CenterCards />
+        <RightCards onOpenAnnouncements={onOpenAnnouncements} />
+        <CenterCards onOpenReports={onOpenReports} />
 
-        <div className="admin-tab-events">
+        <div className="admin-tab-events" onClick={handleManageEvents} style={{ cursor: 'pointer' }}>
           <div className="admin-tab-events-bg" />
           <div className="admin-tab-events-label">Event</div>
         </div>
 
-        <div className="admin-tab-announcements">
+        <div className="admin-tab-announcements" onClick={onOpenAnnouncements} style={{ cursor: 'pointer' }}>
           <div className="admin-tab-announcements-bg" />
           <div className="admin-tab-announcements-label">Announcements</div>
         </div>
 
-        <div className="admin-tab-reports">
+        <div className="admin-tab-reports" onClick={onOpenReports} style={{ cursor: 'pointer' }}>
           <div className="admin-tab-reports-bg" />
           <div className="admin-tab-reports-label">Reports</div>
         </div>
 
-        <CalendarContainer />
+        <CalendarContainer onAddEvent={onAddEvent} onDateClick={onDateClick} />
       </div>
     </div>
   );

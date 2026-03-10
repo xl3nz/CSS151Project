@@ -1,5 +1,6 @@
 import React from 'react';
 import closeIcon from '../../assets/login-modal/close.svg';
+import DonationCard from '../../components/DonationCard';
 import './DonationListModal.css';
 
 const sampleDonations = {
@@ -318,67 +319,18 @@ export default function DonationListModal({ isOpen, onClose, category, isRequest
           {sortedDonations.length > 0 ? (
             <div className="donation-list-grid">
               {sortedDonations.map((donation) => (
-                <div key={donation.id} className="donation-list-item">
-                  {category !== 'money' && (
-                    <div className="donation-list-image-container">
-                      <img 
-                        src={donation.image} 
-                        alt={donation.name}
-                        className="donation-list-image"
-                        onError={(e) => {
-                          e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xMDAgMTAwTDEwMCAxMDBaIiBzdHJva2U9IiM4Qzg1OTIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=';
-                        }}
-                      />
-                    </div>
-                  )}
-                  
-                  <div className="donation-list-details">
-                    <div className="donation-list-name">{donation.name}</div>
-                    <div className="donation-list-quantity">Quantity: {donation.quantity}</div>
-                    
-                    {category === 'money' ? (
-                      <>
-                        <div className="donation-list-amount">Amount: {donation.amount}</div>
-                        <div className="donation-list-method">Method: {donation.method}</div>
-                        <div className="donation-list-date">Date: {formatDate(donation.date)}</div>
-                        <div className="donation-list-status">Status: {donation.status}</div>
-                      </>
-                    ) : (
-                      <>
-                        <div className="donation-list-description">{donation.description}</div>
-                        {donation.expiryDate && (
-                          <div className="donation-list-expiry">
-                            Expiry Date: {formatDate(donation.expiryDate)}
-                          </div>
-                        )}
-                      </>
-                    )}
-                    
-                    {/* Claim Button - Hidden for Money Category */}
-                    {category !== 'money' && (
-                      <div className="donation-list-actions">
-                        <button 
-                          className="donation-list-claim-button"
-                          onClick={() => handleClaim(donation.id)}
-                        >
-                          {category === 'request' ? 'Donate to Request' : 'Claim Donation'}
-                        </button>
-                      </div>
-                    )}
-                    
-                    {/* Donate Button for Money Category - Pending Requests Only */}
-                    {category === 'money' && donation.status === 'Pending' && (
-                      <div className="donation-list-actions">
-                        <button 
-                          className="donation-list-donate-button"
-                          onClick={() => handleClaim(donation.id)}
-                        >
-                          Donate Now
-                        </button>
-                      </div>
-                    )}
-                  </div>
-                </div>
+                <DonationCard
+                  key={donation.id}
+                  donation={donation}
+                  category={category}
+                  onClaim={handleClaim}
+                  onDonate={handleClaim}
+                  onReport={(donationId, donationName) => {
+                    console.log(`Reporting donation: ${donationName} (ID: ${donationId})`);
+                    // TODO: Implement report functionality
+                  }}
+                  isRequest={isRequest}
+                />
               ))}
             </div>
           ) : (

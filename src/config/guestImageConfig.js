@@ -6,6 +6,14 @@ import rectangle137 from '../assets/guest/rectangle-137.svg';
 import rectangle138 from '../assets/guest/rectangle-138.png';
 import placeholderImg from '../assets/guest/placeholder_img.jpg';
 import primary from '../assets/guest/primary.svg';
+import domPfp from '../assets/guest/dom_pfp.jpeg';
+import xyPfp from '../assets/guest/xy_pfp.jpeg';
+import alfonsPfp from '../assets/guest/alfons_pfp.jpeg';
+import nicPfp from '../assets/guest/nic_pfp.jpeg';
+import fbIcon from '../assets/guest/fb_icon.png';
+import gmailIcon from '../assets/guest/gmail_icon.png';
+import instaIcon from '../assets/guest/insta_icon.png';
+import discordIcon from '../assets/guest/discord_icon.png';
 
 export const guestImages = {
   // Logo/Home section
@@ -23,6 +31,19 @@ export const guestImages = {
 
   // Icons
   loginIcon: primary,
+
+  // Member profile pictures
+  domPfp: domPfp,
+  xyPfp: xyPfp,
+  alfonsPfp: alfonsPfp,
+  nicPfp: nicPfp,
+
+  // Social media icons
+  fbIcon: fbIcon,
+  gmailIcon: gmailIcon,
+  instaIcon: instaIcon,
+  discordIcon: discordIcon,
+
 };
 
 // Export individual getters for easy updates

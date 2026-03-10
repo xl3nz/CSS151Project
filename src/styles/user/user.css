@@ -38,8 +38,8 @@
   left: 50%;
   position: absolute;
   top: 41px;
-  width: 477px;
   transform: translateX(-50%);
+  width: 477px;
 }
 
 .user .user-search-field {

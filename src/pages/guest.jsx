@@ -5,7 +5,7 @@ import BrowseDonationsModal from '../components/modals/BrowseDonationsModal';
 import '../styles/guest/guest.css';
 import { guestImages } from '../config/guestImageConfig';
 
-export default function Guest() {
+export default function Guest({ onLogin }) {
   const [openModal, setOpenModal] = useState(null);
   const [scaleX, setScaleX] = useState(1);
   const [scaleY, setScaleY] = useState(1);
@@ -42,6 +42,14 @@ export default function Guest() {
 
   const close = () => setOpenModal(null);
 
+  const handleLogin = (email, password) => {
+    const success = onLogin(email, password);
+    if (success) {
+      setOpenModal(null);
+    }
+    return success;
+  };
+
   return (
     <div className="guest-scale-wrapper" ref={wrapperRef} style={{ height: '100vh' }}>
       <div
@@ -74,18 +82,58 @@ export default function Guest() {
             <p className="guest-members-list">
               Citra, Dominic S.<br />Cueva, Xyruz Lee A.<br />Dimalaluan, Alfons Niemrad B.<br />Ticzon, Niccolo Earl R.
             </p>
-            <div className="guest-members-dot-1" />
-            <div className="guest-members-dot-2" />
-            <div className="guest-members-dot-3" />
-            <div className="guest-members-dot-4" />
+            <div className="guest-members-dot-1" style={{ backgroundImage: `url(${guestImages.domPfp})` }}>
+              <div className="guest-member-tooltip">
+                <div className="guest-tooltip-content">
+                  <div className="guest-tooltip-name">Citra, Dominic S.</div>
+                  <div className="guest-tooltip-email">dominics1008@gmail.com</div>
+                  <div className="guest-tooltip-phone">09293835093</div>
+                </div>
+              </div>
+            </div>
+            <div className="guest-members-dot-2" style={{ backgroundImage: `url(${guestImages.xyPfp})` }}>
+              <div className="guest-member-tooltip">
+                <div className="guest-tooltip-content">
+                  <div className="guest-tooltip-name">Cueva, Xyruz Lee A.</div>
+                  <div className="guest-tooltip-email">xyruz.lee.a.cueva@gmail.com</div>
+                  <div className="guest-tooltip-phone">09155880094</div>
+                </div>
+              </div>
+            </div>
+            <div className="guest-members-dot-3" style={{ backgroundImage: `url(${guestImages.alfonsPfp})` }}>
+              <div className="guest-member-tooltip">
+                <div className="guest-tooltip-content">
+                  <div className="guest-tooltip-name">Dimalaluan, Alfons Niemrad B.</div>
+                  <div className="guest-tooltip-email">alfonsbdimalaluan@gmail.com</div>
+                  <div className="guest-tooltip-phone">09282485476</div>
+                </div>
+              </div>
+            </div>
+            <div className="guest-members-dot-4" style={{ backgroundImage: `url(${guestImages.nicPfp})` }}>
+              <div className="guest-member-tooltip">
+                <div className="guest-tooltip-content">
+                  <div className="guest-tooltip-name">Ticzon, Niccolo Earl R.</div>
+                  <div className="guest-tooltip-email">nicoticzon@gmail.com</div>
+                  <div className="guest-tooltip-phone">09162285038</div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="guest-social-section">
             <div className="guest-social-title">Socials</div>
-            <div className="guest-social-dot-1" />
-            <div className="guest-social-dot-2" />
-            <div className="guest-social-dot-3" />
-            <div className="guest-social-dot-4" />
+            <a href="https://www.facebook.com/xyruzlee.cueva" target="_blank" rel="noopener noreferrer" className="guest-social-link">
+              <div className="guest-social-dot-1" style={{ backgroundImage: `url(${guestImages.fbIcon})` }} />
+            </a>
+            <a href="mailto:xlac.archer@gmail.com?subject=Hello&body=Hi%20there!" target="_blank" rel="noopener noreferrer" className="guest-social-link">
+              <div className="guest-social-dot-2" style={{ backgroundImage: `url(${guestImages.gmailIcon})` }} />
+            </a>
+            <a href="https://www.instagram.com/mr._lee05/" target="_blank" rel="noopener noreferrer" className="guest-social-link">
+              <div className="guest-social-dot-3" style={{ backgroundImage: `url(${guestImages.instaIcon})` }} />
+            </a>
+            <a href="https://discord.gg/SVwZPesk" target="_blank" rel="noopener noreferrer" className="guest-social-link">
+              <div className="guest-social-dot-4" style={{ backgroundImage: `url(${guestImages.discordIcon})` }} />
+            </a>
           </div>
 
           <div className="guest-featured-event">
@@ -101,15 +149,14 @@ export default function Guest() {
               <div className="guest-featured-login-label">Login</div>
               <img className="guest-featured-login-icon" src={guestImages.loginIcon} alt="" />
             </button>
-            <div className="guest-featured-details-link">Details -&gt;</div>
+            <div className="guest-featured-details-link">Details</div>
           </div>
 
           <div className="guest-mission-card">
             <div className="guest-mission-card-base" />
             <div className="guest-info-card-overlay" />
             <p className="guest-info-card-description">
-              <span className="guest-info-card-description-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo nisl odio, in dignissim lectus rutrum at. <br /></span>
-              <span className="guest-info-card-more-link">More →</span>
+              <span className="guest-info-card-description-text">SendHelp makes it simple for people to support others who need help. We connect those who want to give with those who need it, quickly and directly. <br /></span>
             </p>
             <div className="guest-info-card-pill" />
             <div className="guest-mission-pill-label">Mission</div>
@@ -139,14 +186,13 @@ export default function Guest() {
             <div className="guest-vision-card-base" />
             <div className="guest-info-card-overlay" />
             <p className="guest-info-card-description">
-              <span className="guest-info-card-description-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo nisl odio, in dignissim lectus rutrum at. <br /></span>
-              <span className="guest-info-card-more-link">More →</span>
+              <span className="guest-info-card-description-text">We believe helping someone should never be complicated. Our goal is a world where anyone can offer support with just a few clicks. <br /></span>
             </p>
             <div className="guest-info-card-pill" />
             <div className="guest-vision-pill-label">Vision</div>
           </div>
 
-          {openModal === 'login' && <LoginModal onClose={close} onSignUp={() => setOpenModal('register')} />}
+          {openModal === 'login' && <LoginModal onClose={close} onSignUp={() => setOpenModal('register')} onLogin={handleLogin} />}
           {openModal === 'register' && <RegisterModal onClose={close} />}
           {openModal === 'browse' && <BrowseDonationsModal onClose={close} />}
         </div>

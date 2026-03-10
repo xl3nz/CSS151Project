@@ -1,28 +1,12 @@
 import React from 'react';
 import closeIcon from '../../assets/login-modal/close.svg';
 import './CalendarEventModal.css';
-
-const sampleEvents = [
-  {
-    id: 1,
-    title: "Blood Donation Drive",
-    time: "10:00 AM - 2:00 PM",
-    location: "Community Center",
-    description: "Monthly blood donation event for the community",
-    date: "2026-03-15"
-  },
-  {
-    id: 2,
-    title: "Food Distribution",
-    time: "3:00 PM - 5:00 PM",
-    location: "St. Mary's Church",
-    description: "Weekly food distribution for families in need",
-    date: "2026-03-22"
-  }
-];
+import { useCalendar } from '../../contexts/CalendarContext';
 
 export default function CalendarEventModal({ isOpen, onClose, selectedDate }) {
   if (!isOpen) return null;
+
+  const { events } = useCalendar();
 
   const formatDate = (date) => {
     return date.toLocaleDateString('en-US', {
@@ -33,7 +17,7 @@ export default function CalendarEventModal({ isOpen, onClose, selectedDate }) {
     });
   };
 
-  const eventsForDate = sampleEvents.filter(event => {
+  const eventsForDate = events.filter(event => {
     const eventDate = new Date(event.date);
     const selectedDateObj = new Date(selectedDate);
     return eventDate.getFullYear() === selectedDateObj.getFullYear() &&

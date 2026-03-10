@@ -10,6 +10,7 @@ import MenuBarModal from '../components/modals/MenuBarModal';
 import DonationListModal from '../components/modals/DonationListModal';
 import DonateMoneyModal from '../components/modals/DonateMoneyModal';
 import SearchedItemsModal from '../components/modals/SearchedItemsModal';
+import { useCalendar } from '../contexts/CalendarContext';
 import manageButton from '../assets/user/ManageButton.png';
 import menuButton from '../assets/user/MenuButton.png';
 import myClaimsButton from '../assets/user/MyClaimsButton.png';
@@ -17,30 +18,10 @@ import newDonatonButton from '../assets/user/NewDonatonButton.png';
 import primary from '../assets/Primary.png';
 import '../styles/user/user.css';
 
-// Sample events for testing
-const sampleEvents = [
-  {
-    id: 1,
-    title: "Blood Donation Drive",
-    time: "10:00 AM - 2:00 PM",
-    location: "Community Center",
-    description: "Monthly blood donation event for the community",
-    date: "2026-03-15"
-  },
-  {
-    id: 2,
-    title: "Food Distribution",
-    time: "3:00 PM - 5:00 PM",
-    location: "St. Mary's Church",
-    description: "Weekly food distribution for families in need",
-    date: "2026-03-22"
-  }
-];
-
 const BASE_WIDTH = 1920;
 const BASE_HEIGHT = 1080;
 
-export const User = () => {
+export const User = ({ onLogout }) => {
   const wrapperRef = useRef(null);
   const [scaleX, setScaleX] = useState(1);
   const [scaleY, setScaleY] = useState(1);
@@ -57,6 +38,9 @@ export const User = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearchActive, setIsSearchActive] = useState(false);
+
+  // Use calendar context
+  const { events } = useCalendar();
 
   useEffect(() => {
     if (!wrapperRef.current) return undefined;
@@ -215,7 +199,7 @@ export const User = () => {
 
           <FeaturedEvent />
           <Calendar 
-            events={sampleEvents}
+            events={events}
             onDateClick={(date) => {
               setSelectedDate(date);
               setIsCalendarEventModalOpen(true);
@@ -268,6 +252,7 @@ export const User = () => {
             <MenuBarModal
               isOpen={isMenuBarModalOpen}
               onClose={() => setIsMenuBarModalOpen(false)}
+              onLogout={onLogout}
             />
           )}
 

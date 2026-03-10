@@ -157,6 +157,17 @@ body {
   height: 51px;
   background-color: #d9d9d9;
   border-radius: 24.61px / 25.65px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  overflow: visible;
+}
+
+.guest .guest-members-dot-1:hover .guest-member-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .guest .guest-members-dot-2 {
@@ -167,6 +178,17 @@ body {
   height: 51px;
   background-color: #b4b4b4;
   border-radius: 24.61px / 25.65px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  overflow: visible;
+}
+
+.guest .guest-members-dot-2:hover .guest-member-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .guest .guest-members-dot-3 {
@@ -177,6 +199,17 @@ body {
   height: 51px;
   background-color: #999999;
   border-radius: 24.61px / 25.65px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  overflow: visible;
+}
+
+.guest .guest-members-dot-3:hover .guest-member-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .guest .guest-members-dot-4 {
@@ -187,6 +220,58 @@ body {
   height: 51px;
   background-color: #555555;
   border-radius: 24.61px / 25.65px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  overflow: visible;
+}
+
+.guest .guest-members-dot-4:hover .guest-member-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.guest .guest-member-tooltip {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  min-width: 250px;
+  max-width: 400px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  padding: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.guest .guest-tooltip-content {
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.guest .guest-tooltip-name {
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.guest .guest-tooltip-email {
+  margin-bottom: 4px;
+  color: #cccccc;
+}
+
+.guest .guest-tooltip-phone {
+  color: #cccccc;
 }
 
 .guest .guest-social-section {
@@ -209,6 +294,11 @@ body {
   line-height: normal;
 }
 
+.guest .guest-social-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
 .guest .guest-social-dot-1 {
   position: absolute;
   top: 53px;
@@ -217,6 +307,16 @@ body {
   height: 44px;
   background-color: #d9d9d9;
   border-radius: 22px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.guest .guest-social-dot-1:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .guest .guest-social-dot-2 {
@@ -227,6 +327,16 @@ body {
   height: 44px;
   background-color: #b4b4b4;
   border-radius: 22px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.guest .guest-social-dot-2:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .guest .guest-social-dot-3 {
@@ -237,6 +347,16 @@ body {
   height: 44px;
   background-color: #999999;
   border-radius: 22px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.guest .guest-social-dot-3:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .guest .guest-social-dot-4 {
@@ -247,6 +367,16 @@ body {
   height: 44px;
   background-color: #555555;
   border-radius: 22px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.guest .guest-social-dot-4:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .guest .guest-featured-event {

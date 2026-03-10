@@ -6,10 +6,27 @@ import googlelogo1 from '../../assets/login-modal/googlelogo 1.png';
 import placeholderImg from '../../assets/guest/placeholder_img.jpg';
 import './LoginModal.css';
 
-export const LogIn = ({ onClose, onSignUp }) => {
+export const LogIn = ({ onClose, onSignUp, onLogin }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setError('');
+
+    if (!email || !password) {
+      setError('Please enter both email and password');
+      return;
+    }
+
+    const success = onLogin(email, password);
+    
+    if (!success) {
+      setError('Invalid email or password');
+    }
+  };
 
   return (
     <div className="login-modal" role="dialog" aria-modal="true" aria-label="Log in">
@@ -29,12 +46,18 @@ export const LogIn = ({ onClose, onSignUp }) => {
           <span className="login-modal-heading-back">Back</span>
         </p>
 
-        <div className="login-modal-subtitle">Enter you details</div>
+        <div className="login-modal-subtitle">Enter your details</div>
+
+        {error && (
+          <div className="login-modal-error" role="alert">
+            {error}
+          </div>
+        )}
 
         <div className="login-modal-social-title">Log in with</div>
 
         <p className="login-modal-signup-row">
-          Don’t have an account?&nbsp;
+          Don't have an account?&nbsp;
           <button
             type="button"
             className="login-modal-signup-link"
@@ -68,35 +91,39 @@ export const LogIn = ({ onClose, onSignUp }) => {
 
         <div className="login-modal-divider-right" />
 
-        <input
-          className="login-modal-email-input"
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-
-        <input
-          className="login-modal-password-input"
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-
-        <label className="login-modal-remember-row">
+        <form onSubmit={handleSubmit}>
           <input
-            className="login-modal-remember-checkbox"
-            type="checkbox"
-            checked={rememberMe}
-            onChange={(e) => setRememberMe(e.target.checked)}
+            className="login-modal-email-input"
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
           />
-          <span className="login-modal-remember-label">Remember for 30 days</span>
-        </label>
 
-        <button type="button" className="login-modal-submit-button">
-          Log In
-        </button>
+          <input
+            className="login-modal-password-input"
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+
+          <label className="login-modal-remember-row">
+            <input
+              className="login-modal-remember-checkbox"
+              type="checkbox"
+              checked={rememberMe}
+              onChange={(e) => setRememberMe(e.target.checked)}
+            />
+            <span className="login-modal-remember-label">Remember for 30 days</span>
+          </label>
+
+          <button type="submit" className="login-modal-submit-button">
+            Log In
+          </button>
+        </form>
       </div>
 
       <img
@@ -114,6 +141,6 @@ export const LogIn = ({ onClose, onSignUp }) => {
   );
 };
 
-export default function LoginModal({ onClose, onSignUp }) {
-  return <LogIn onClose={onClose} onSignUp={onSignUp} />;
+export default function LoginModal({ onClose, onSignUp, onLogin }) {
+  return <LogIn onClose={onClose} onSignUp={onSignUp} onLogin={onLogin} />;
 }

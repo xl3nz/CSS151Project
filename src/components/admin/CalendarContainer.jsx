@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import lVector from '../../assets/user/l-vector.svg';
 import rVector from '../../assets/user/r-vector.svg';
 import './CalendarContainer.css';
+import { useCalendar } from '../../contexts/CalendarContext';
 
 const WEEKDAYS = ['Mo', 'Tu', 'Wed', 'Th', 'Fr', 'Sa', 'Su'];
 
@@ -45,9 +46,10 @@ const buildMonthCells = (date) => {
   return cells;
 };
 
-export const CalendarContainer = () => {
+export const CalendarContainer = ({ onAddEvent, onDateClick }) => {
   const [viewDate, setViewDate] = useState(new Date(2026, 2, 1));
   const today = new Date();
+  const { events } = useCalendar();
 
   const monthLabel = useMemo(
     () => viewDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' }),
@@ -55,6 +57,26 @@ export const CalendarContainer = () => {
   );
 
   const cells = useMemo(() => buildMonthCells(viewDate), [viewDate]);
+
+  // Helper function to check if a date has events
+  const hasEvents = (date) => {
+    return events.some(event => {
+      const eventDate = new Date(event.date);
+      return eventDate.getFullYear() === date.getFullYear() &&
+             eventDate.getMonth() === date.getMonth() &&
+             eventDate.getDate() === date.getDate();
+    });
+  };
+
+  // Helper function to get events for a specific date
+  const getEventsForDate = (date) => {
+    return events.filter(event => {
+      const eventDate = new Date(event.date);
+      return eventDate.getFullYear() === date.getFullYear() &&
+             eventDate.getMonth() === date.getMonth() &&
+             eventDate.getDate() === date.getDate();
+    });
+  };
 
   const goPrevMonth = () => {
     setViewDate((prev) => new Date(prev.getFullYear(), prev.getMonth() - 1, 1));
@@ -64,12 +86,24 @@ export const CalendarContainer = () => {
     setViewDate((prev) => new Date(prev.getFullYear(), prev.getMonth() + 1, 1));
   };
 
+  const handleAddEvent = () => {
+    if (onAddEvent) {
+      onAddEvent();
+    }
+  };
+
+  const handleDateClick = (date) => {
+    if (onDateClick && hasEvents(date)) {
+      onDateClick(date);
+    }
+  };
+
   return (
     <div className="admin-calendar-container">
       <div className="admin-calendar-shell">
         <div className="admin-calendar-shell-bg" />
 
-        <div className="admin-calendar-new-event">
+        <div className="admin-calendar-new-event" onClick={handleAddEvent} style={{ cursor: 'pointer' }}>
           <div className="admin-calendar-new-event-main" />
           <div className="admin-calendar-new-event-side" />
           <div className="admin-calendar-new-event-label">Add New Event</div>
@@ -109,13 +143,18 @@ export const CalendarContainer = () => {
                   cell.date.getFullYear() === today.getFullYear() &&
                   cell.date.getMonth() === today.getMonth() &&
                   cell.date.getDate() === today.getDate();
+                
+                const hasEvent = hasEvents(cell.date);
 
                 return (
                   <div
                     key={cell.date.toISOString()}
-                    className={`calendar-day-cell ${cell.inCurrentMonth ? 'is-current-month' : 'is-outside-month'} ${isToday ? 'is-today' : ''}`.trim()}
+                    className={`calendar-day-cell ${cell.inCurrentMonth ? 'is-current-month' : 'is-outside-month'} ${isToday ? 'is-today' : ''} ${hasEvent ? 'has-event' : ''}`.trim()}
+                    onClick={() => handleDateClick(cell.date)}
+                    style={{ cursor: hasEvent ? 'pointer' : 'default' }}
                   >
                     {cell.day}
+                    {hasEvent && <div className="event-marker" />}
                   </div>
                 );
               })}

@@ -2,7 +2,7 @@ import React from 'react';
 import closeIcon from '../../assets/login-modal/close.svg';
 import './MenuBarModal.css';
 
-export default function MenuBarModal({ isOpen, onClose }) {
+export default function MenuBarModal({ isOpen, onClose, onLogout }) {
   const menuItems = [
     {
       id: 'profile',
@@ -46,6 +46,9 @@ export default function MenuBarModal({ isOpen, onClose }) {
     // TODO: Implement menu item actions
     console.log('Menu action:', itemId);
     if (itemId === 'logout') {
+      if (onLogout) {
+        onLogout();
+      }
       onClose();
     }
   };

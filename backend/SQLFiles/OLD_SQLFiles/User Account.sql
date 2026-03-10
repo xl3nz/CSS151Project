@@ -1,7 +1,7 @@
-CREATE DATABASE IF NOT EXISTS user_account;
+CREATE DATABASE user_account;
 USE user_account;
 
-CREATE TABLE IF NOT EXISTS users (
+CREATE TABLE users (
     -- Core Identity
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(50) NOT NULL,
@@ -24,22 +24,4 @@ CREATE TABLE IF NOT EXISTS users (
     -- Timestamps (Tracks when account is created or updated)
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP 
-);
-
--- Insert an admin user
-INSERT INTO users (
-    first_name, last_name, email, role, password_hash, auth_provider, is_verified, account_status
-) VALUES (
-    'Lee', 'Ber', 'admin@example.com', 'admin', 
-    '$2y$10$examplehashadmin', -- hashed password placeholder
-    'local', TRUE, 'active'
-);
-
--- Insert a regular user
-INSERT INTO users (
-    first_name, last_name, email, role, password_hash, auth_provider, is_verified, account_status
-) VALUES (
-    'Jane', 'Doe', 'user@example.com', 'user', 
-    '$2y$10$examplehashuser', -- hashed password placeholder
-    'local', FALSE, 'active'
 );

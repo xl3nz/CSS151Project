@@ -35,9 +35,8 @@ export default function Navbar({ currentRole, onChangeRole, onHide }) {
         </div>
         
         <div className="navbar-info">
-          <span className="current-role">Current Role: <strong>{currentRole.charAt(0).toUpperCase() + currentRole.slice(1)}</strong></span>
-          <button className="navbar-hide-button" onClick={onHide} title="Temporarily hide navbar">
-            Hide Navbar
+          <button className="navbar-toggle-button" onClick={onHide} title="Toggle navbar visibility">
+            {currentRole === 'admin' ? 'Hide Navbar' : 'Show Navbar'}
           </button>
         </div>
       </div>
